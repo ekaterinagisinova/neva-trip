@@ -1,0 +1,370 @@
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSans;
+  src: url(../fonts/OpenSans-SemiBold.ttf);
+  font-weight: 600;
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+button:focus {
+  outline: none;
+}
+html {
+  font-size: 10px;
+}
+body {
+  min-width: 375px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+}
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 1.2rem;
+}
+.excursion {
+  margin: 3em 1.7em 0em 1.7em;
+  position: relative;
+  border: 0.03rem solid #828282;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 1.6rem;
+}
+.excursion__img {
+  border-top-right-radius: 1.6rem;
+  border-top-left-radius: 1.6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.excursion__img__label {
+  position: absolute;
+  text-transform: uppercase;
+  padding: 0.83em 1.5em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #343434;
+}
+.excursion__img__label-yellow {
+  background-color: #fed74b;
+  color: #3e3e3e;
+  top: 4rem;
+  left: 0em;
+}
+.excursion__img__label-purple {
+  background-color: #7553ff;
+  top: 0rem;
+  left: 0em;
+  border-top-left-radius: 1.6rem;
+  border-bottom-right-radius: 1.2rem;
+  color: #ffffff;
+}
+.excursion__img__label-blue {
+  top: 4rem;
+  left: 0em;
+  background-color: #099ce8;
+  color: #ffffff;
+}
+.excursion__duration {
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #9e9e9e;
+  line-height: 2rem;
+  margin: 1.4rem 0 1.4rem 2.5rem;
+  position: relative;
+}
+.excursion__duration::before {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  top: 0.2rem;
+  left: -2.5rem;
+  background-image: url(../image/clock.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.excursion__title {
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #404040;
+  line-height: 1.5em;
+}
+.excursion__list {
+  margin: 2rem 0 0.8rem 0;
+  list-style: none;
+}
+.excursion__list__item {
+  margin-top: 1.1rem;
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #4b4b4b;
+  line-height: 2rem;
+  position: relative;
+}
+.excursion__list__item::before {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  position: absolute;
+  top: 0.2rem;
+  left: -3.5rem;
+  background-image: url(../image/check-mark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.excursion__schedule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: 3.7rem;
+}
+.excursion__schedule__time {
+  margin: 0.2rem 0.6rem;
+  padding: 0.4rem 1rem;
+  background-color: #d9e8ff;
+  border-radius: 1.1rem;
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #343434;
+  line-height: 2rem;
+}
+.excursion__schedule__btn {
+  margin: 0.2rem 0.6rem;
+  padding: 0.4rem 1rem;
+  background-color: #d9e8ff;
+  border-radius: 1.1rem;
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #343434;
+  line-height: 2rem;
+}
+.excursion__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 3.5rem;
+  margin-bottom: 2rem;
+}
+.excursion__info__price {
+  margin-left: 0.7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+.excursion__info__price__add {
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #000000;
+}
+.excursion__info__more {
+  background-color: #fed74b;
+  border: 0.05rem solid #cba500;
+  font-family: OpenSans, Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #404040;
+  padding: 1.3rem 4.1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+}
+.excursion__info__more:hover {
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+          box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.excursion__info__more:active {
+  background-color: #cba500;
+}
+.excursion__info__more-circle {
+  border-radius: 2rem;
+}
+.excursion__info__more-square {
+  border-radius: 1rem;
+}
+.excursion:last-child {
+  margin-bottom: 3rem;
+}
+.btn__more {
+  border: none;
+  cursor: pointer;
+}
+.btn__more:hover {
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+          box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.btn__more:active {
+  background-color: #6ba6ff;
+}
+.active {
+  background-color: #6ba6ff;
+}
+.hidden {
+  display: none;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 1.6rem 1.7rem 2.6rem 2.3rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .excursion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .excursion__img {
+    margin-left: 3%;
+    max-width: 45%;
+    height: 100%;
+    overflow: hidden;
+    -o-object-fit: fill;
+       object-fit: fill;
+    border-radius: 1.6rem;
+  }
+  .excursion__img__label {
+    font-size: 1.6rem;
+    padding: 1.3rem 3.5rem;
+    top: 25%;
+    left: 3%;
+  }
+  .excursion__img__label-purple {
+    border-radius: 0;
+  }
+  .excursion__title {
+    font-size: 1.8rem;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .excursion__duration {
+    margin: 1.1rem 0 0rem 2.5rem;
+    padding: 0;
+    font-size: 1.4rem;
+  }
+  .excursion__list {
+    margin: 1rem 0rem 0 0;
+  }
+  .excursion__list__item {
+    font-size: 1.4rem;
+  }
+  .excursion__schedule {
+    margin-top: 1rem;
+  }
+  .excursion__info {
+    margin: 2.4rem 0 0 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  .excursion__info__price {
+    width: 30%;
+  }
+}
+@media (min-width: 1200px) {
+  .excursion__img {
+    margin-left: 0;
+    border-bottom-left-radius: 1.6rem;
+    border-top-left-radius: 1.6rem;
+    border-bottom-right-radius: 0rem;
+    border-top-right-radius: 0rem;
+  }
+  .excursion__img__label {
+    top: 10%;
+    left: 0;
+  }
+  .excursion__img__label-purple {
+    top: 0;
+    border-top-left-radius: 1.6rem;
+    border-bottom-right-radius: 1.2rem;
+  }
+  .excursion__schedule {
+    position: absolute;
+    top: 57%;
+    right: 0%;
+    width: 55%;
+  }
+  .excursion__info {
+    margin-top: 10%;
+  }
+  .container {
+    position: relative;
+  }
+}
