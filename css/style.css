@@ -30,7 +30,7 @@ html {
   font-size: 10px;
 }
 body {
-  min-width: 375px;
+  min-width: 305px;
   width: 100%;
   margin: 0 auto;
   font-family: OpenSans, Arial, Helvetica, sans-serif;
@@ -38,6 +38,16 @@ body {
   font-weight: 400;
   font-style: normal;
   color: #000000;
+}
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 .container {
   display: -webkit-box;
@@ -50,7 +60,9 @@ body {
   padding: 0 1.2rem;
 }
 .excursion {
-  margin: 3em 1.7em 0em 1.7em;
+  max-width: 341px;
+  width: 100%;
+  margin: 3em 2% 0 2%;
   position: relative;
   border: 0.03rem solid #828282;
   -webkit-box-sizing: border-box;
@@ -58,17 +70,17 @@ body {
   border-radius: 1.6rem;
 }
 .excursion__img {
-  border-top-right-radius: 1.6rem;
-  border-top-left-radius: 1.6rem;
+  width: 100%;
+  height: 285px;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 100%;
-  height: auto;
+  border-top-right-radius: 1.6rem;
+  border-top-left-radius: 1.6rem;
 }
 .excursion__img__label {
   position: absolute;
   text-transform: uppercase;
-  padding: 0.83em 1.5em;
+  padding: 1em 1.8em 0.9rem 1.4rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: OpenSans, Arial, Helvetica, sans-serif;
@@ -104,7 +116,7 @@ body {
   font-style: normal;
   color: #9e9e9e;
   line-height: 2rem;
-  margin: 1.4rem 0 1.4rem 2.5rem;
+  margin: 1.4rem 0 1rem 2.4rem;
   position: relative;
 }
 .excursion__duration::before {
@@ -112,8 +124,8 @@ body {
   width: 1.6rem;
   height: 1.6rem;
   position: absolute;
-  top: 0.2rem;
-  left: -2.5rem;
+  top: 0.1rem;
+  left: -2.6rem;
   background-image: url(../image/clock.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -128,11 +140,12 @@ body {
   line-height: 1.5em;
 }
 .excursion__list {
-  margin: 2rem 0 0.8rem 0;
+  margin: 0.9rem 0 0.8rem 0;
   list-style: none;
 }
 .excursion__list__item {
   margin-top: 1.1rem;
+  margin-left: -0.5rem;
   font-family: OpenSans, Arial, Helvetica, sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
@@ -153,19 +166,22 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.excursion__schedule {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: 3.7rem;
+.excursion__list__item:nth-child(3) {
+  margin-top: 1.5rem;
 }
-.excursion__schedule__time {
-  margin: 0.2rem 0.6rem;
-  padding: 0.4rem 1rem;
+.excursion__list__item:nth-child(4) {
+  margin-top: 1.7rem;
+}
+.excursion__list__item__timer {
+  display: block;
+  margin-top: 0.7rem;
+}
+.excursion__list__item__timer__time {
+  display: inline-block;
+  margin: 0rem 0.4rem 0 0;
+  padding: 0.2rem 1.35rem 0.3rem 1.35rem;
   background-color: #d9e8ff;
-  border-radius: 1.1rem;
+  border-radius: 1.5rem;
   font-family: OpenSans, Arial, Helvetica, sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
@@ -173,9 +189,12 @@ body {
   color: #343434;
   line-height: 2rem;
 }
-.excursion__schedule__btn {
-  margin: 0.2rem 0.6rem;
-  padding: 0.4rem 1rem;
+.excursion__list__item__timer__time:nth-child(n+5) {
+  margin-top: 1rem;
+}
+.excursion__list__item__timer__btn {
+  margin: 0.2rem 0.4rem;
+  padding: 0.3rem 1.2rem;
   background-color: #d9e8ff;
   border-radius: 1.1rem;
   font-family: OpenSans, Arial, Helvetica, sans-serif;
@@ -195,11 +214,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 3.5rem;
+  margin-top: 1.6rem;
   margin-bottom: 2rem;
 }
 .excursion__info__price {
-  margin-left: 0.7rem;
+  margin-left: 0.6rem;
+  margin-top: -1.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,6 +255,7 @@ body {
   font-style: normal;
   color: #404040;
   padding: 1.3rem 4.1rem;
+  margin: 1rem 1rem 1rem 1rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: pointer;
@@ -272,15 +293,22 @@ body {
 .hidden {
   display: none;
 }
-@media (min-width: 768px) {
+@media (max-width: 352px) {
+  .excursion__list__item__timer__time:nth-child(n+4) {
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 1100px) {
   .container {
-    padding: 1.6rem 1.7rem 2.6rem 2.3rem;
+    padding: 0 2.7rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   .excursion {
+    max-width: 1070px;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -289,82 +317,71 @@ body {
             align-items: center;
   }
   .excursion__img {
-    margin-left: 3%;
-    max-width: 45%;
-    height: 100%;
-    overflow: hidden;
-    -o-object-fit: fill;
-       object-fit: fill;
-    border-radius: 1.6rem;
-  }
-  .excursion__img__label {
-    font-size: 1.6rem;
-    padding: 1.3rem 3.5rem;
-    top: 25%;
-    left: 3%;
-  }
-  .excursion__img__label-purple {
-    border-radius: 0;
-  }
-  .excursion__title {
-    font-size: 1.8rem;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-  }
-  .excursion__duration {
-    margin: 1.1rem 0 0rem 2.5rem;
-    padding: 0;
-    font-size: 1.4rem;
-  }
-  .excursion__list {
-    margin: 1rem 0rem 0 0;
-  }
-  .excursion__list__item {
-    font-size: 1.4rem;
-  }
-  .excursion__schedule {
-    margin-top: 1rem;
-  }
-  .excursion__info {
-    margin: 2.4rem 0 0 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
-  }
-  .excursion__info__price {
-    width: 30%;
-  }
-}
-@media (min-width: 1200px) {
-  .excursion__img {
-    margin-left: 0;
+    width: 470px;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-bottom-left-radius: 1.6rem;
     border-top-left-radius: 1.6rem;
     border-bottom-right-radius: 0rem;
     border-top-right-radius: 0rem;
   }
   .excursion__img__label {
-    top: 10%;
+    font-size: 1.6rem;
+    padding: 1.3rem 3.5rem;
+    top: 12%;
     left: 0;
   }
   .excursion__img__label-purple {
     top: 0;
-    border-top-left-radius: 1.6rem;
-    border-bottom-right-radius: 1.2rem;
+    left: 0;
   }
-  .excursion__schedule {
-    position: absolute;
-    top: 57%;
-    right: 0%;
-    width: 55%;
+  .excursion__title {
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 3.5rem;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .excursion__duration {
+    margin: 1rem 0 0 2rem;
+    padding: 0;
+    font-size: 1.4rem;
+  }
+  .excursion__list {
+    margin: 0 0 0 -1rem;
+  }
+  .excursion__list__item {
+    font-size: 1.8rem;
+  }
+  .excursion__list__item:before {
+    top: 0.5rem;
+    left: -3rem;
+  }
+  .excursion__list__item__timer {
+    display: inline;
+    margin: 0;
+  }
+  .excursion__list__item__timer__time {
+    font-size: 1.6rem;
+    padding: 0.2rem 1.1rem 0.3rem 1.1rem;
   }
   .excursion__info {
-    margin-top: 10%;
+    margin-top: 1.6rem;
+    margin-bottom: 0rem;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
   }
-  .container {
-    position: relative;
+  .excursion__info__price {
+    font-size: 36px;
+  }
+  .excursion__info__price__add {
+    font-size: 14px;
+  }
+  .excursion__info__more {
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
   }
 }
